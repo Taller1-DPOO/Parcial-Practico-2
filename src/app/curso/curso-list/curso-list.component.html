@@ -3,7 +3,7 @@
     <br />
 
     <div class="selected-book rounded" *ngIf="selected">
-      <app-curso-detail [cursoDetail]="selectedCurso"></app-curso-detail>
+    <app-curso-detail [Curso]="selectedCurso"></app-curso-detail>
     </div>
 
     <br />
@@ -22,6 +22,8 @@
               </tr>
             </thead>
             <tbody class="table-group-divider">
+
+
               <tr *ngFor="let curso of cursos">
                 <th scope="row">{{ curso.id }}</th>
                 <td (click)="onSelected(curso)" >{{ curso.title }} </td>
@@ -31,7 +33,8 @@
               </tr>
             </tbody>
           </table>
+          <p>los cursos {{mostrarCertificado(cursos)}} ofrecen certificado</p>
         </div>
       </div>
-      <p> /p>
+
     </div>

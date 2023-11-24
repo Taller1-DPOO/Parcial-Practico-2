@@ -3,12 +3,12 @@ export class Curso {
     title: string;
     platform: string;
     launch_year: number;
-    offers_certificate: string;
+    offers_certificate: boolean;
     description: string;
     image: string;
     duration_hours: number;
 
-    constructor(id: number, title: string, platform: string, launch_year: number, offers_certificate: string, description: string, image: string, duration_hours: number) {
+    constructor(id: number, title: string, platform: string, launch_year: number, offers_certificate: boolean, description: string, image: string, duration_hours: number) {
         this.id = id;
         this.title = title;
         this.platform = platform;

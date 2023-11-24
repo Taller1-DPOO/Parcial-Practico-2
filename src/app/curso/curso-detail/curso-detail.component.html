@@ -1,10 +1,19 @@
+
+
+
+
 <div class="container-fluid">
   <div class="card" style="width: 18rem;">
-    <img src="{{ cursoDetail.image }}" class="card-img-top" alt="{{ cursoDetail.title }}">
+    <img src="{{ Curso.image }}" class="card-img-top" alt="{{ Curso.title }}">
     <div class="card-body">
-      <h5 class="card-title">{{ cursoDetail.title }}</h5>
-      <p class="card-text">{{ cursoDetail.description }}</p>
-      <p class="card-text">{{ cursoDetail.offers_certificate }}</p>
+      <h5 class="card-title">{{ Curso.title }}</h5>
+      <p class="card-text">{{ Curso.description }}</p>
+      <p class="card-text">
+        Ofrece certificado: 
+        <span *ngIf="Curso.offers_certificate; else noCertificate">Sí</span>
+        <ng-template #noCertificate>No</ng-template>
+      </p>
     </div>
   </div>
- </div>
+</div>
+
