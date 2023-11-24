@@ -32,9 +32,9 @@ export class CursoListComponent implements OnInit {
   constructor(private CursoService: CursoService) { }
 
   getCursos(): void {
-    this.CursoService.getCursos().subscribe((cursos)=> {
-      // this.cursos = cursos;
-    });
+    // this.CursoService.getCursos().subscribe((cursos)=> {
+    //   // this.cursos = cursos;
+    // });
   }
   
   ngOnInit() {
