@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div>
+    <br />
+
+    <div class="selected-book rounded" *ngIf="selected">
+      <app-curso-detail [cursoDetail]="selectedCurso"></app-curso-detail>
+    </div>
+
+    <br />
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col mb-2">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Lanzamiento</th>
+                <th scope="col">duracion</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let curso of cursos">
+                <th scope="row">{{ curso.id }}</th>
+                <td (click)="onSelected(curso)" >{{ curso.title }} </td>
+                <th scope="row">{{ curso.platform }}</th>
+                <th scope="row">{{ curso.launch_year }}</th>
+                <th scope="row">{{ curso.duration_hours }}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p> /p>
+    </div>
